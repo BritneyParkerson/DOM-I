@@ -41,6 +41,34 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//example selector
-// const logoTitle = document.getElementById("logo-title")
-// console.log('logo title', logoTitle)
+
+
+//Edit Background
+document.body.style.backgroundColor = "#50BFE6"
+
+//Navigation
+const navMenu = document.querySelectorAll("a");
+navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
+navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
+navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
+navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
+navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
+navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
+
+ navMenu.forEach(element=>{element.style.color="green"})
+
+const stories = document.createElement('a');
+stories.textContent = "Stories"
+const parentElement = document.querySelector('nav');
+parentElement.appendChild(stories) 
+
+const mainPage = document.createElement('a');
+mainPage.textContent = "Main Page"
+parentElement.prepend(mainPage) 
+
+stories.style.color = "#FEFEFA"
+mainPage.style.color = "#FEFEFA"
+
+
+//Logo
+
